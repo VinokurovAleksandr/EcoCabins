@@ -5,7 +5,7 @@
 *{
     padding: 0;
     margin: 0;
-    bottom: 0;
+    border: 0;
 }
 
 *,
@@ -39,6 +39,12 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+}
 /*-----------------------------------*/
 
 
@@ -58,6 +64,12 @@ body {
 }
 .page {
     flex: 1 1 auto;
+}
+
+/*загальні стилі*/
+
+.page__main {
+
 }
 
 /*Adaptive */
@@ -80,23 +92,211 @@ body {
     color: #222F33;
 }
 
+/*----------------HEADER----------------*/
 
-.page {}
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
 
-.page__main {}
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 105px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    gap: 20px;
+    justify-content: space-between;
+}
 
-.main-section {}
+.header__logo {
+    overflow: hidden;
+}
+.header__logo img{
+    width: 135px;
+}
 
-.main-section__container {}
+.header__body {
+   display: flex;
+   align-items: center;
+   column-gap: 20px; 
 
-.main-section_content {}
+}
 
-.main-section__label {}
 
-.main-section__title {}
+.header__menu {
 
-.title {}
+}
 
-.main-section__video-link {}
+.menu {
+     /* display: flex;
+    align-items: center; */
+    /* gap: 40px;  */
+}
 
-.main-section__image {}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media (max-width: 670px) {
+    .header__logo {
+        width: 33px;
+        flex: 0 0 33px;
+    }
+
+    .header__container {
+        min-width: 70px;
+    }
+
+    .header__body {
+        column-gap: 20px;
+    }
+
+    .header__button {
+        width: 30px;
+        height: 15px;
+    }
+
+    .menu__list {
+        column-gap: 20px;
+        font-size: 14px;
+    }
+}
+/* @media (max-width: 370px) {
+  
+} */
+.menu__item {}
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+.header__button {
+    width: 90px;
+    height: 34px;
+  
+    border-radius: 4px;
+    background:  #FFF;
+    border: none;
+    color: #606B74;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+
+}
+.header__button:hover {
+    background-color: #141313;
+    color: #FFFFFF;
+}
+
+/*----------------MAIN---------------*/
+
+
+.main-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex; 
+    /* flex: 1 1 auto; */
+}
+
+.main-section__container {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    /* display: flex; */
+    align-items: center;
+    /* position: relative; */
+    z-index: 2;
+    gap: 20px;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 54.320988% 1fr;
+    /* display: grid;
+    grid-template-columns: 54.320988% 1fr;
+    align-items: center; */
+}
+
+@media (min-width: 500px ) {
+    .main-section__container {
+        grid-template-columns:auto;
+        align-content: center;
+    }
+}
+
+.main-section__content {
+ 
+
+}
+
+.main-section__label {
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-section__label:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.main-section__title {
+
+
+}
+
+.title {
+    font-family: Merriweather;
+    color: #FFFFFF;
+     font-size: 30px;
+     font-weight: 900;
+     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-section__video-link {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing:  1px;
+}
+
+.main-section__video-link::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url('/img/BtnPlay.svg') left no-repeat;
+    border-radius: 50%;
+}
+
+
+
+.main-section__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.main-section__image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+}
