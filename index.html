@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
     <link rel="stylesheet" href="/css/style.css" />
+
     <title>EcoCabins</title>
   </head>
   <body>
@@ -50,8 +55,49 @@
             <img src="img/bg.png" alt="bg" />
           </div>
         </section>
+        <section class="page__materials materials">
+          <div class="materials__container">
+            <div class="materials__content">
+              <h2 class="materials__title title title--dark">
+                Duurzame materialen
+              </h2>
+              <div class="materials__text">
+                <p>
+                  Alle EcoCabins hebben een hoge isolatiewaarde, worden
+                  geproduceerd met indien mogelijk duurzame en/of natuurlijke
+                  materialen en hebben als opvallende uiterlijke kenmerk de
+                  ‘ronde hoeken’, mogelijk gemaakt door het specifieke
+                  materiaalgebruik. De voordelen van bouwen met hout zijn legio:
+                  hout is licht, flexibel, isoleert goed en bouwt snel en
+                  efficiënt.
+                </p>
+              </div>
+              <a class="materials__btn">Lees meer</a>
+            </div>
+            <!-- Slider main container -->
+            <div class="materials__slider slider-materials swiper">
+              <!-- Additional required wrapper -->
+              <div class="slider-materials__wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="slider-materials__slide swiper-slide">
+                  <img src="/img/materials/materialSlider.jpg" alt="image" />
+                </div>
+                <div class="slider-materials__slide swiper-slide">
+                  <img src="/img/materials/materialSlider.jpg" alt="image" />
+                </div>
+                <div class="slider-materials__slide swiper-slide">
+                  <img src="/img/materials/materialSlider.jpg" alt="image" />
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="slider-materials__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer"></footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
